@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide</p>
+    <h1>Leonida Platinum</h1>
+    <p class="lede">Every one of the 55 official trophies — name, description and grade as PlayStation publishes them — with a guide in our own words that cites its sources, a roadmap to the platinum, and a tracker that saves in your browser.</p>
+    <div class="totals" id="totals" aria-live="polite">
+      <span class="total-count"><strong id="earnedCount">0</strong> / 55 earned</span>
+      <span class="total-medals" id="medalCounts">1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze</span>
+    </div>
+    <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  </div>
+</header>
+
+<main>
+  <section class="toolbar" aria-label="Tracker controls">
+    <label class="search-box">Search
+      <input id="searchInput" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off">
+    </label>
+    <div class="chip-row" id="kindChips" role="group" aria-label="Filter by kind"></div>
+    <div class="toolbar-row">
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="earnedOnly"> Earned only</label>
+      <label class="check"><input type="checkbox" id="spoilerToggle"> Hide story spoilers</label>
+      <div class="save-actions">
+        <button type="button" id="exportBtn">Export progress</button>
+        <button type="button" id="importBtn">Import progress</button>
+        <input type="file" id="importFile" accept="application/json,.json" hidden>
+        <button type="button" id="resetBtn" class="danger">Reset</button>
+      </div>
+    </div>
+    <p class="toolbar-note" id="filterNote"></p>
+  </section>
+
+  <nav class="tabs" aria-label="Guide sections">
+    <button type="button" class="tab active" data-view="checklist">Checklist</button>
+    <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+    <button type="button" class="tab" data-view="missables">Missable trophies</button>
+  </nav>
+
+  <div class="layout">
+    <section class="panel" id="viewPanel" aria-live="polite">
+      <ul class="trophy-list" id="trophyList"></ul>
+      <div class="roadmap" id="roadmapView" hidden></div>
+      <div class="missables" id="missablesView" hidden></div>
+      <p class="empty" id="emptyNote" hidden>No trophies match these filters. Clear the search or pick another kind.</p>
+    </section>
+
+    <aside class="detail" id="detailPane" aria-label="Selected trophy">
+      <p class="detail-empty">Pick a trophy from the list to read its guide and sources.</p>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades: the official list on <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> and <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a>, which agree on every name, description and grade. Guides are written for this entry, in our own words, from those official descriptions; where a description does not pin down a place or a step, the guide says so instead of inventing one.</p>
+  <p><strong>Offline.</strong> This guide is static files only — it loads nothing from the network and saves your progress in this browser (localStorage). No Rockstar Games artwork or logo is used; the look is our own.</p>
+  <p class="fine">Leonida Platinum is an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive. Built for the make.fun GTA 6 trophy guide bounty.</p>
+</footer>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
